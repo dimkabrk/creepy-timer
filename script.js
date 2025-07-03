@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tickSound = document.getElementById('tickSound');
     const fullscreenImage = document.getElementById('fullscreenImage'); // Новая строка!
     
-    let timeLeft = 60;
+    let timeLeft = 30;
     let timerInterval;
     let isRunning = false;
     
@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
             timerDisplay.textContent = "00:00";
-            message.textContent = "ОНИ ПРИШЛИ...";
+            message.textContent = "ПЛАН ТАБУРЕТКИ...";
             message.style.opacity = 1;
             
             // ===== ПОКАЗЫВАЕМ КАРТИНКУ =====
-            fullscreenImage.src = "images/scary.jpg"; // Путь к вашей картинке!
+            fullscreenImage.src = "plantab.jpg"; // Путь к вашей картинке!
             fullscreenImage.classList.add('show');
             
             // Трясём экран
@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
             clearInterval(timerInterval);
             isRunning = false;
             startBtn.textContent = "НАЧАТЬ";
-            timeLeft = 60;
-            timerDisplay.textContent = "01:00";
+            timeLeft = 30;
+            timerDisplay.textContent = "00:30";
             
             // ===== СБРАСЫВАЕМ КАРТИНКУ =====
             fullscreenImage.classList.remove('show');
